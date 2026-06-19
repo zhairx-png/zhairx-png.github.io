@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Serif+SC:wght@500;700;900&display=swap');
+
+@theme {
+  --font-sans: "Inter", "PingFang SC", system-ui, sans-serif;
+  --font-serif: "Noto Serif SC", serif;
+}
+
+/* Hide native scrollbar across entire exhibit for seamless side scroll immersion */
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+*::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+body {
+  background-color: #050505;
+  background-image: radial-gradient(circle at 50% 50%, rgba(10, 34, 48, 0.45) 0%, rgba(5, 5, 5, 1) 100%);
+  color: #E0E0E0;
+}
+
+/* Global cursor overrides in interactive spaces */
+.hide-cursor, .hide-cursor a, .hide-cursor button, .hide-cursor input, .hide-cursor select, .hide-cursor .stone-card, .hide-cursor .magic-card {
+  cursor: none !important;
+}
+
+/* Custom design components */
+.stone-card {
+  width: 320px;
+  height: 485px;
+  background: linear-gradient(145deg, #0b1a24, #050505);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 35px;
+  box-sizing: border-box;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.65);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+}
+
+.stone-card:hover {
+  transform: translateY(-16px) scale(1.02);
+  border-color: #c9af7f !important;
+  box-shadow: 0 25px 60px rgba(201, 175, 127, 0.18);
+}
+
+.timeline-node {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.timeline-node:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: #e5dec9 !important;
+  box-shadow: 0 15px 35px rgba(229, 222, 201, 0.12);
+}
+
+.animate-spin-slow {
+  animation: spin 30s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes ripple-expand-active {
+  0% {
+    transform: translate(-50%, -50%) scale(0.3);
+    opacity: 0.9;
+    filter: blur(1px);
+  }
+  50% {
+    opacity: 0.6;
+    filter: blur(2px);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.0);
+    opacity: 0;
+    filter: blur(4px);
+  }
+}

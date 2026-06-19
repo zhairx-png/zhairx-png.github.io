@@ -1,0 +1,10 @@
+{
+  "name": "Remix: Remix: 白鹤梁水下数字时空博物馆",
+  "description": "融合WebGL实时流体手势交互与GSAP横向卷轴的水下数字博物馆，支持摄像头手势控水体验",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
