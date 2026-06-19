@@ -184,7 +184,7 @@ export default function WaterMirror({ onBack }: WaterMirrorProps) {
           try {
             // Attempt to load the user's custom water sound first. 
             // In the AI Studio editor, upload your sound file to the 'public' folder and rename it to 'water_sound.mp3'.
-            const response = await fetch('./water_sound.mp3');
+            const response = await fetch('/water_sound.mp3');
             if (response.ok) {
               const arrayBuffer = await response.arrayBuffer();
               const audioBuffer = await ctx.decodeAudioData(arrayBuffer);
@@ -425,29 +425,6 @@ export default function WaterMirror({ onBack }: WaterMirrorProps) {
     prevFingersRef.current.push(pt);
   };
 
-  const customRippleBufferRef = useRef<AudioBuffer | null>(null);
-
-  useEffect(() => {
-    // Preload custom ripple sound
-    const preloadSound = async () => {
-      try {
-        const response = await fetch('./water_sound.mp3');
-        if (response.ok) {
-          const arrayBuffer = await response.arrayBuffer();
-          const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
-          if (!audioContextRef.current) {
-            audioContextRef.current = new AudioContextClass();
-          }
-          const audioBuffer = await audioContextRef.current.decodeAudioData(arrayBuffer);
-          customRippleBufferRef.current = audioBuffer;
-        }
-      } catch (e) {
-        // Ignored fallback
-      }
-    };
-    preloadSound();
-  }, []);
-
   // Sound triggering function for sparkling, gurgling ripple splashes & bubble sweeps
   const playRippleSound = (intensity: number, isGesture: boolean = false) => {
     // Lazily create audio context if it does not exist yet to play splash sounds
@@ -474,26 +451,7 @@ export default function WaterMirror({ onBack }: WaterMirrorProps) {
     lastSoundTimeRef.current = now;
 
     try {
-      if (customRippleBufferRef.current) {
-        // Play custom user-provided sound
-        const source = ctx.createBufferSource();
-        source.buffer = customRippleBufferRef.current;
-        
-        // Add random pitch shifting for natural effect on rapid triggers
-        source.playbackRate.value = 0.85 + Math.random() * 0.3;
-        
-        const gainNode = ctx.createGain();
-        gainNode.gain.setValueAtTime(intensity * 0.8, ctx.currentTime);
-        gainNode.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 1.0); // quick fade to avoid stacking noise
-        
-        source.connect(gainNode);
-        gainNode.connect(ctx.destination);
-        source.start(ctx.currentTime);
-        
-        return;
-      }
-
-      // Fallback: Spawn 2 to 3 fluid bubble droplets staggered in time for organic liquid depth
+      // Spawn 2 to 3 fluid bubble droplets staggered in time for organic liquid depth
       const count = isGesture ? (Math.random() > 0.65 ? 2 : 1) : (Math.random() > 0.4 ? 3 : 2);
       
       for (let d = 0; d < count; d++) {
