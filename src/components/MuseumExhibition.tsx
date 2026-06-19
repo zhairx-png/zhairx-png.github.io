@@ -68,7 +68,7 @@ export default function MuseumExhibition({ onEnterMirror }: MuseumExhibitionProp
       title: '张楫题诗',
       subtitle: '历代文墨 · 张楫题诗',
       era: '-',
-      image: '/src/assets/images/张楫题诗.png',
+      image: './images/张楫题诗.png',
       content: [
         '江石有双鳞，沉浮验年岁。隐微宜自规，凶乐正相系。古人形此镌，览者发长喟。勿谓仰无闻，顺理终有泻。大明正德庚午郡人张楫题。'
       ],
@@ -81,7 +81,7 @@ export default function MuseumExhibition({ onEnterMirror }: MuseumExhibitionProp
       title: '张椽和黄寿诗',
       subtitle: '历代文墨 · 张椽和黄寿诗',
       era: '-',
-      image: '/src/assets/images/张椽和黄寿诗.png',
+      image: './images/张椽和黄寿诗.png',
       content: [
         '石鱼随出没，民安即是丰。一州蒙作福，百姓免遭凶。张弛谁能测，奸横自敛踪。天工夺造化屈指几人同。大明正德庚午涪人张楫拜和。'
       ],
@@ -94,7 +94,7 @@ export default function MuseumExhibition({ onEnterMirror }: MuseumExhibitionProp
       title: '娄橒题记',
       subtitle: '历代文墨 · 娄橒题记',
       era: '-',
-      image: '/src/assets/images/lytj.png',
+      image: './images/lytj.png',
       content: [
         '去者已去，来者又来。万古如斯，何抚此而徘徊。'
       ],
@@ -107,7 +107,7 @@ export default function MuseumExhibition({ onEnterMirror }: MuseumExhibitionProp
       title: '游白鹤梁',
       subtitle: '历代文墨 · 游白鹤梁',
       era: '-',
-      image: '/src/assets/images/游白鹤梁.png',
+      image: './images/游白鹤梁.png',
       content: [
         '江水西来去自东，浪淘尽几英雄。两三鸣鹤摩天渐，卅六鳞鱼兆岁丰。皇祐序诗刘转运，元符纪事黄涪翁。遍舟载得潞州酒，醉听渔人唱晚风。民国丁丑仲春，至山老人刘镕经题，年七十六矣。邑人刘树培涂鸦，同游文君明盛、王君伯勋。'
       ],
@@ -120,7 +120,7 @@ export default function MuseumExhibition({ onEnterMirror }: MuseumExhibitionProp
       title: '杨公留题',
       subtitle: '历代文墨 · 杨公留题',
       era: '-',
-      image: '/src/assets/images/yglt.png',
+      image: './images/yglt.png',
       content: [
         '太守杨公留题邀客西津上，观鱼出水初。长江多巨石，此地近仙居。所记皆名笔，为祥旧奏书。丰年知有验，遗秉利将舒。戏草春波静，双鳞乐意徐。不才叨郡寄，燕喜愧萧疏。'
       ],
@@ -133,7 +133,7 @@ export default function MuseumExhibition({ onEnterMirror }: MuseumExhibitionProp
       title: '徐庄题记',
       subtitle: '历代文墨 · 徐庄题记',
       era: '-',
-      image: '/src/assets/images/xztj.png',
+      image: './images/xztj.png',
       content: [
         '大宋熙宁元年正月二十日，军事判官徐庄，同巡检供奉王安民、监税殿直王克岐、知乐温县钟浚、涪陵县令赵君仪、司理参军李袭，观石鱼题名，涪陵尉郑阶平书。二石鱼在江心石梁上，古记云出水四尺，岁必大稔。袁能刻。'
       ],
@@ -146,7 +146,7 @@ export default function MuseumExhibition({ onEnterMirror }: MuseumExhibitionProp
       title: '仙鹤独立《白鹤时鸣图》',
       subtitle: '白鹤仙羽回流 · 石梁图腾生态纪事画刻',
       era: '中华民国二十六年 (1937 A.D.)',
-      image: '/src/assets/images/bhsmt.png',
+      image: './images/bhsmt.png',
       content: [
         '白鹤梁的美丽之名，源自这一枯水期生态图腾：相传每逢大旱，石梁凸显，成群身披仙羽的雪白野鹤便会从天盘旋坠下，站立于石梁缝里争捕被激湍搁浅的小鱼溪蟹，引颈高歌，蔚为江天仙景。',
         '民国二十六年抗战前夕，名画家刘冕阶泛舟江心，被枯涸下的这一奇伟姿态倾倒，遂于礁石梁顶镌刻《白鹤时鸣图》。白鹤长足直立，双翅欲敛，回尾鸣响，象征人神与自然的和平律动。',
@@ -164,7 +164,7 @@ export default function MuseumExhibition({ onEnterMirror }: MuseumExhibitionProp
       title: '《送子观音图》',
       subtitle: '历代文墨 · 送子观音图',
       era: '-',
-      image: '/src/assets/images/szgyx.png',
+      image: './images/szgyx.png',
       content: [
         '大清光绪二年杭州许丽生敬摹。'
       ],
@@ -177,7 +177,7 @@ export default function MuseumExhibition({ onEnterMirror }: MuseumExhibitionProp
       title: '无压容器·长江水下防爆玻璃穹顶',
       subtitle: '葛修润院士巨献 · 世纪水文明珠之隔水平衡盾',
       era: '跨世纪保护工程（2003 - 2009 A.D.）',
-      image: '/src/assets/images/hydraulic_science_containment_1781528412054.jpg',
+      image: './images/hydraulic_science_containment_1781528412054.jpg',
       content: [
         '2003年，随着长江三峡大坝的完全蓄水，枯水江滩将长眠于垂直40米之下的重压急浪与浑浊泥沙中。常态日光观测退居历史，且极易面临浪沙磨蚀和水下结构坍缩。',
         '为守护瑰宝，中国工程院院士葛修润献上了精绝天才的“无压容器原址防护”方案。他们在碑林礁石上套造大型双拱防护罩，并在罩里灌满完全经过滤层层透析的水过滤清水，使其内外水压绝对持平！',
@@ -963,7 +963,7 @@ export default function MuseumExhibition({ onEnterMirror }: MuseumExhibitionProp
                   <div 
                     className="absolute inset-0 bg-cover bg-center opacity-85 pointer-events-none transition-all duration-500 brightness-[0.7] saturate-[0.85]"
                     style={{ 
-                      backgroundImage: 'url("/双鱼细节拓片.jpg")',
+                      backgroundImage: 'url("./双鱼细节拓片.jpg")',
                       referrerPolicy: 'no-referrer'
                     }}
                   />
@@ -978,7 +978,7 @@ export default function MuseumExhibition({ onEnterMirror }: MuseumExhibitionProp
                   <div 
                     className={`reveal-img absolute inset-0 bg-cover bg-center z-10 transition-opacity duration-300 cursor-hidden brightness-105 ${isHovered ? 'opacity-100' : 'opacity-0'}`}
                     style={{
-                      backgroundImage: 'url("/双鱼细节拓片浮雕效果.jpg")',
+                      backgroundImage: 'url("./双鱼细节拓片浮雕效果.jpg")',
                       referrerPolicy: 'no-referrer',
                       WebkitMaskImage: 'radial-gradient(circle 200px at var(--x, 50%) var(--y, 50%), black 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%)',
                       maskImage: 'radial-gradient(circle 200px at var(--x, 50%) var(--y, 50%), black 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%)'
